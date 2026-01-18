@@ -11,6 +11,7 @@ import userRoutes from './user/routes/user.routes.js';
 import {rateLimiter} from "@/middleware/rate-limiter.middleware";
 import {errorHandler} from "@/middleware/error-handler.middleware";
 import {mongoSanitizeMiddleware} from "@/middleware/mongodb-sanitize.middleware";
+import commentRoutes from "@/comment/routes/comment.routes";
 
 const app: Application = express();
 
@@ -60,6 +61,7 @@ app.get('/health', (req: Request, res: Response) => {
 const apiVersion = config.apiVersion;
 app.use(`/api/${apiVersion}/auth`, authRoutes);
 app.use(`/api/${apiVersion}/users`, userRoutes);
+app.use(`/api/${apiVersion}/comments`, commentRoutes);
 
 // 404 Handler
 app.use((req: Request, res: Response) => {

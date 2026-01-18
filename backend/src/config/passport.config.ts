@@ -63,14 +63,14 @@ passport.use(
     )
 );
 
-passport.deserializeUser(async (id: string, done) => {
+/*passport.deserializeUser(async (id: string, done) => {
     try {
         const user = await User.findById(id); // must return full IUser
         done(null, user); // attaches user to req.user
     } catch (err) {
         done(err);
     }
-});
+});*/
 
 export const initializePassport = () => {
     return passport.initialize();
