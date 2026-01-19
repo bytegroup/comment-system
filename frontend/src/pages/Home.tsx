@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout } from '../shared/components/layout/Layout';
+import { Layout } from '@components/layout/Layout.tsx';
 import { CommentList } from '../features/comments/components/CommentList';
 import { CommentProvider } from '../features/comments/context/CommentContext';
 

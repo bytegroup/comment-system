@@ -1,9 +1,12 @@
 import 'dotenv/config';
-import 'reflect-metadata'; // Required for decorators
+import 'reflect-metadata';
 import app from './app.js';
 import { connectDatabase } from '@config/db.config';
 import { config } from '@config/env.config';
-import { Logger } from './utils/logger.util.js';
+
+// IMPORTANT: Import all models to register them with Mongoose
+import './models/index.js';
+import {Logger} from "@/utils/logger.util";
 
 const PORT = config.port;
 
