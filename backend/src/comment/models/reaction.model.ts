@@ -13,7 +13,7 @@ const reactionSchema = new Schema<IReaction>(
   {
     user: {
       type: Schema.Types.ObjectId,
-      ref: 'User',
+      ref: 'Users',
       required: [true, 'User is required'],
     },
     comment: {

@@ -23,7 +23,7 @@ const commentSchema = new Schema<IComment>(
     },
     author: {
       type: Schema.Types.ObjectId,
-      ref: 'User',
+      ref: 'Users',
       required: [true, 'Author is required'],
       index: true,
     },
